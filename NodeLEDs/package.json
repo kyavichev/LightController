@@ -1,0 +1,17 @@
+{
+  "name": "node_leds",
+  "version": "1.0.0",
+  "description": "making lights",
+  "main": "test01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "pi-blaster.js": "^0.1.1",
+    "pi-gpio": "0.0.8"
+  }
+}
