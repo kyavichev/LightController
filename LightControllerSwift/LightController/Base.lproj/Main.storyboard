@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,8 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="not connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98r-Ov-Rqs">
+                                <rect key="frame" x="180" y="25" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-th-H7O" userLabel="Ip Label">
+                                <rect key="frame" x="20" y="30" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10.0.0.1:3000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-nU-JIr" userLabel="Ip Address Text Field">
+                                <rect key="frame" x="50" y="25" width="120" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="urlTextFieldFinishedEditting:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="GGG-Zy-pxu"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-6h-zmX">
-                                <rect key="frame" x="20" y="41" width="150" height="50"/>
+                                <rect key="frame" x="20" y="70" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="RED ON">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -28,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPH-nj-afG">
-                                <rect key="frame" x="200" y="41" width="150" height="50"/>
+                                <rect key="frame" x="200" y="70" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="RED OFF">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -38,13 +58,13 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-bf-Kp2" userLabel="Horizontal Slider Red">
-                                <rect key="frame" x="18" y="99" width="334" height="31"/>
+                                <rect key="frame" x="18" y="128" width="334" height="31"/>
                                 <connections>
                                     <action selector="redSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uyb-Ya-JVo"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-qs-vgh" userLabel="GREEN ON">
-                                <rect key="frame" x="20" y="137" width="150" height="50"/>
+                                <rect key="frame" x="20" y="166" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="GREEN ON">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -54,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNh-fm-VpU" userLabel="GREEN OFF">
-                                <rect key="frame" x="200" y="137" width="150" height="50"/>
+                                <rect key="frame" x="200" y="166" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="GREEN OFF">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -64,13 +84,13 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pWC-eI-4h8" userLabel="Horizontal Slider Green">
-                                <rect key="frame" x="18" y="196" width="334" height="31"/>
+                                <rect key="frame" x="18" y="225" width="334" height="31"/>
                                 <connections>
                                     <action selector="greenSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E03-NP-AzL"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtI-6O-o1V" userLabel="BLUE ON">
-                                <rect key="frame" x="20" y="234" width="150" height="50"/>
+                                <rect key="frame" x="20" y="263" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="BLUE ON">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -80,7 +100,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-Bm-hJc" userLabel="BLUE OFF">
-                                <rect key="frame" x="200" y="234" width="150" height="50"/>
+                                <rect key="frame" x="200" y="263" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="BLUE OFF">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -90,13 +110,13 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="viA-xr-Pys" userLabel="Horizontal Slider Blue">
-                                <rect key="frame" x="18" y="292" width="334" height="31"/>
+                                <rect key="frame" x="18" y="321" width="334" height="31"/>
                                 <connections>
                                     <action selector="blueSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nlx-mc-6RL"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIn-0v-5D4" userLabel="All ON">
-                                <rect key="frame" x="20" y="330" width="150" height="50"/>
+                                <rect key="frame" x="20" y="359" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="ALL ON">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -106,7 +126,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-t7-rJf" userLabel="All OFF">
-                                <rect key="frame" x="200" y="330" width="150" height="50"/>
+                                <rect key="frame" x="200" y="359" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="ALL OFF">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -116,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-BY-iT9" userLabel="Fade">
-                                <rect key="frame" x="110" y="399" width="150" height="50"/>
+                                <rect key="frame" x="110" y="428" width="150" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="FADE">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
@@ -128,6 +148,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.56862745100000001" blue="0.63137254899999995" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="connectionLabel" destination="98r-Ov-Rqs" id="xJb-AQ-PSn"/>
+                        <outlet property="urlTextField" destination="EUs-nU-JIr" id="uJ2-56-G4z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
