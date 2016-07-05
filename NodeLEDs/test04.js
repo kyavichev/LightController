@@ -48,6 +48,13 @@ app.get ( '/redOn', function ( req, res ) {
 	res.send( "redOn" );
 });
 
+app.get ( '/redHalf', function ( req, res ) {
+	console.log ( "redHalf" );
+	enableFade = false;
+	piblaster.setPwm ( redPinNumber, 0.5 );
+	res.send( "redHalf" );
+});
+
 app.get ( '/redOff', function ( req, res ) {
 	console.log ( "redOff" );
 	enableFade = false;
@@ -68,6 +75,13 @@ app.get ( '/greenOn', function ( req, res ) {
 	enableFade = false;
 	piblaster.setPwm ( greenPinNumber, 1 );
 	res.send( "greenOn" );
+});
+
+app.get ( '/greenHalf', function ( req, res ) {
+	console.log ( "greenHalf" );
+	enableFade = false;
+	piblaster.setPwm ( greenPinNumber, 0.5 );
+	res.send( "greenHalf" );
 });
 
 app.get ( '/greenOff', function ( req, res ) {

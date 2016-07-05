@@ -95,6 +95,12 @@ class ViewController: UIViewController, UITextFieldDelegate
         self.sendGetRequest2( "redOn" );
     }
     
+    @IBAction func redHalfButton(sender: UIButton)
+    {
+        NSLog( "Red Half Button!" );
+        self.sendGetRequest2( "redHalf" );
+    }
+    
     @IBAction func redOffButton(sender: UIButton)
     {
         NSLog( "Red Off Button!" );
@@ -112,6 +118,12 @@ class ViewController: UIViewController, UITextFieldDelegate
     {
         NSLog( "Green On Button!" );
         self.sendGetRequest2( "greenOn" );
+    }
+    
+    @IBAction func greenHalfButton(sender: UIButton)
+    {
+        NSLog( "Green Half Button!" );
+        self.sendGetRequest2( "greenHalf" );
     }
     
     @IBAction func greenOffButton(sender: UIButton)
