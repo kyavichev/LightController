@@ -22,6 +22,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( { extended: false } ));
 app.set('port', process.env.PORT || 3000);
 
+app.get ( '/heartBeat', function ( req, res ) {
+	console.log ( "heartBeat" );
+	res.send( "heartBeat" );
+});
+
 app.get ( '/allOn', function ( req, res ) {
 	console.log ( "all on" );
 	enableFade = false;
