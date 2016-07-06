@@ -16,6 +16,9 @@ var enableFade = false;
 var colorStep = 0.01;
 var colorCtrl = 0;
 
+var colorStep1 = 0.01;
+var colorStep2 = 0.1;
+
 turnOffAll();
 var app = express();
 app.use(bodyParser.json());
@@ -106,6 +109,13 @@ app.get ( '/blueOn', function ( req, res ) {
 	res.send( "blueOn" );
 });
 
+app.get ( '/blueHalf', function ( req, res ) {
+	console.log ( "blueHalf" );
+	enableFade = false;
+	piblaster.setPwm( bluePinNumber, 0.5 );
+	res.send( "blueHalf" );
+});
+
 app.get ( '/blueOff', function ( req, res ) {
 	console.log ( "blueOff" );
 	enableFade = false;
@@ -127,6 +137,20 @@ app.get ( '/fade', function ( req, res ) {
 	res.send( "fade" );
 });
 
+app.get ( '/fade1', function ( req, res ) {
+	console.log( "fade1" );
+	colorStep = colorStep1;
+	enableFade = true;
+	res.send( "fade1" );
+});
+
+app.get ( '/fade2', function ( req, res ) {
+	console.log( "fade2" );
+	colorStep = colorStep2;
+	enableFade = true;
+	res.send( "fade2" );
+});
+
 var server = app.listen(app.get('port'), function() {
 	console.log('listening on port %d', server.address().port);
 });
@@ -140,7 +164,7 @@ u.on('Event',function ()
    	//console.log("Event catched!");
 	if ( enableFade )
 	{
-		colorCtrl += colorStep * timeStep;
+		colorCtrl += colorStep;
 		var fadeValue = Math.abs( Math.sin ( colorCtrl ) );
 		piblaster.setPwm ( redPinNumber, fadeValue );
 		fadeValue = Math.abs( Math.sin ( colorCtrl / 2 ) );
