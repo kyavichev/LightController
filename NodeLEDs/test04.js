@@ -140,7 +140,7 @@ u.on('Event',function ()
    	//console.log("Event catched!");
 	if ( enableFade )
 	{
-		colorCtrl += colorStep;
+		colorCtrl += colorStep * timeStep;
 		var fadeValue = Math.abs( Math.sin ( colorCtrl ) );
 		piblaster.setPwm ( redPinNumber, fadeValue );
 		fadeValue = Math.abs( Math.sin ( colorCtrl / 2 ) );
