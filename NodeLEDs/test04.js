@@ -19,6 +19,10 @@ var colorCtrl = 0;
 var colorStep1 = 0.01;
 var colorStep2 = 0.1;
 
+var currentRed = 0;
+var currentGreen = 0;
+var currentBlue = 0;
+
 turnOffAll();
 var app = express();
 app.use(bodyParser.json());
@@ -32,11 +36,7 @@ app.get ( '/heartBeat', function ( req, res ) {
 
 app.get ( '/currentColors', function ( req, res ) {
 	console.log ( "currentColors" );
-	res.data = {};
-	res.data.red = 220;
-	res.data.green = 200;
-	res.data.blue = 1;
-	res.send( { "data1": { "red": 220, "green": 200, "blue": 100 } } );
+	res.send( { "data": { "red": currentRed, "green": currentGreen, "blue": currentBlue } } );
 	res.send( "currentColors" );
 });
 
@@ -57,21 +57,21 @@ app.get ( '/allOff', function ( req, res ) {
 app.get ( '/redOn', function ( req, res ) {
 	console.log ( "redOn" );
 	enableFade = false;
-	piblaster.setPwm ( redPinNumber, 1 );
+	setRed( 1 );
 	res.send( "redOn" );
 });
 
 app.get ( '/redHalf', function ( req, res ) {
 	console.log ( "redHalf" );
 	enableFade = false;
-	piblaster.setPwm ( redPinNumber, 0.5 );
+	setRed( 0.5 );
 	res.send( "redHalf" );
 });
 
 app.get ( '/redOff', function ( req, res ) {
 	console.log ( "redOff" );
 	enableFade = false;
-	piblaster.setPwm ( redPinNumber, 0 );
+	setRed( 0 );
 	res.send( "redOff" );
 });
 
@@ -79,28 +79,28 @@ app.post ( '/redValue/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "redValue: " + value );
 	enableFade = false;
-	piblaster.setPwm ( redPinNumber, value );
+	setRed( value );
 	res.send( "redValue" );
 });
 
 app.get ( '/greenOn', function ( req, res ) {
 	console.log ( "greenOn" );
 	enableFade = false;
-	piblaster.setPwm ( greenPinNumber, 1 );
+	setGreen( 1 );
 	res.send( "greenOn" );
 });
 
 app.get ( '/greenHalf', function ( req, res ) {
 	console.log ( "greenHalf" );
 	enableFade = false;
-	piblaster.setPwm ( greenPinNumber, 0.5 );
+	setGreen( 0.5 );
 	res.send( "greenHalf" );
 });
 
 app.get ( '/greenOff', function ( req, res ) {
 	console.log ( "greenOff" );
 	enableFade = false;
-	piblaster.setPwm ( greenPinNumber, 0 );
+	setGreen( 0 );
 	res.send( "greenOff" );
 });
 
@@ -108,7 +108,7 @@ app.post ( '/greenValue/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "greenValue: " + value );
 	enableFade = false;
-	piblaster.setPwm ( greenPinNumber, value );
+	setGreen( value );
 	res.send( "greenValue" );
 });
 
@@ -176,15 +176,34 @@ u.on('Event',function ()
 	{
 		colorCtrl += colorStep;
 		var fadeValue = Math.abs( Math.sin ( colorCtrl ) );
-		piblaster.setPwm ( redPinNumber, fadeValue );
+		setRed( fadeValue );
 		fadeValue = Math.abs( Math.sin ( colorCtrl / 2 ) );
-		piblaster.setPwm ( greenPinNumber, fadeValue );
+		setGreen( fadeValue );
 		fadeValue = Math.abs( Math.sin ( colorCtrl / 1.25 ) );
-		piblaster.setPwm ( bluePinNumber, fadeValue );
+		setBlue( fadeValue );
 
 		console.log ( "fadeValue: " + fadeValue );
 	}
 });
+
+
+function setRed ( value )
+{
+	currentRed = value * 255;
+	piblaster.setPwm ( redPinNumber, value );
+}
+
+function setGreen ( value )
+{
+	currentGreen = value * 255;
+	piblaster.setPwm ( greenPinNumber, value );
+}
+
+function setBlue ( value )
+{
+	currentBlue = value * 255;
+	piblaster.setPwm ( bluePinNumber, value );
+}
 
 
 function turnOnAll ()
