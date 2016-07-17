@@ -30,6 +30,15 @@ app.get ( '/heartBeat', function ( req, res ) {
 	res.send( "heartBeat" );
 });
 
+app.get ( '/currentColors', function ( req, res ) {
+	console.log ( "currentColors" );
+	res.data = {};
+	res.data.red = 220;
+	res.data.green = 200;
+	res.data.blue = 1;
+	res.send( "currentColors" );
+});
+
 app.get ( '/allOn', function ( req, res ) {
 	console.log ( "all on" );
 	enableFade = false;
