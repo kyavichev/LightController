@@ -16,6 +16,10 @@ class ViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var connectionLabel: UILabel!
     @IBOutlet weak var urlTextField: UITextField!
     
+    @IBOutlet weak var redColorLabel: UILabel!
+    @IBOutlet weak var greenColorLabel: UILabel!
+    @IBOutlet weak var blueColorLabel: UILabel!
+    
 
     override func viewDidLoad()
     {
@@ -26,6 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         self.urlTextField.delegate = self;
         
         NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.checkHeartBeat), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.getColors), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +78,66 @@ class ViewController: UIViewController, UITextFieldDelegate
         
         self.sendGetRequest3( "heartBeat", completionHandler:completionHandler)
     }
+    
+    
+    func getColors ()
+    {
+        NSLog( "Getting colors" );
+        
+        let completionHandler:(NSData?, NSURLResponse?, NSError?) -> Void = { (data, response, error:NSError?) in
+            
+            if ( error != nil )
+            {
+                print( "Could not get colors. Error: \(error)" )
+                
+            }
+            else
+            {
+                NSLog ( "Got colors: " )
+                
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    NSLog( "status code: \(httpResponse.statusCode)")
+                    
+                    
+                    let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    NSLog( "GetColors: Response data: \(dataString)" )
+                    
+                    //let optionalDataString = NSString(data: data!.valueForKey("Optional") as! NSData, encoding:NSUTF8StringEncoding)
+                    //NSLog( "Optional: \(optionalDataString)" )
+                    
+                    let jsonDataArray = self.nsdataToJSON(data!) as? NSDictionary
+                    let jsonDataMap = jsonDataArray?.objectForKey((jsonDataArray?.allKeys[0])!) as? NSDictionary
+                    let red = String( jsonDataMap?.objectForKey( "red" ) as! Int )
+                    let green = String ( jsonDataMap?.objectForKey( "green" ) as! Int )
+                    let blue = String( jsonDataMap?.objectForKey( "blue" ) as! Int )
+                    
+                
+                    dispatch_async(dispatch_get_main_queue(), {
+                        
+                        self.redColorLabel.text = red;
+                        self.greenColorLabel.text = green;
+                        self.blueColorLabel.text = blue;
+                    })
+                }
+            }
+                
+        }
+        
+        self.sendGetRequest3( "currentColors", completionHandler:completionHandler)
+    }
+    
+    
+    
+    func nsdataToJSON(data: NSData) -> AnyObject? {
+        do {
+            return try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
+        } catch let myJSONError {
+            print(myJSONError)
+        }
+        return nil
+    }
+    
+    
     
     
     @IBAction func urlTextFieldFinishedEditting(textField: UITextField)
@@ -145,6 +210,12 @@ class ViewController: UIViewController, UITextFieldDelegate
         self.sendGetRequest2( "blueOn" );
     }
     
+    @IBAction func blueHalfButton(sender: UIButton)
+    {
+        NSLog( "Blue Half Button!" );
+        self.sendGetRequest2( "blueHalf" );
+    }
+    
     @IBAction func blueOffButton(sender: UIButton)
     {
         NSLog( "Blue Off Button!" );
@@ -161,7 +232,13 @@ class ViewController: UIViewController, UITextFieldDelegate
     @IBAction func fadeButton(sender: UIButton)
     {
         NSLog( "Fade Button!" );
-        self.sendGetRequest2( "fade" );
+        self.sendGetRequest2( "fade1" );
+    }
+    
+    @IBAction func fade2Button(sender: UIButton)
+    {
+        NSLog( "Fade 2 Button!" );
+        self.sendGetRequest2( "fade2" );
     }
     
     @IBAction func allOnButton(sender: UIButton)
