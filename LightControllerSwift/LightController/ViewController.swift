@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         self.urlTextField.delegate = self;
         
         NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.checkHeartBeat), userInfo: nil, repeats: true)
-        NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.getColors), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.getColors), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
