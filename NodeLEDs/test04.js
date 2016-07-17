@@ -36,6 +36,7 @@ app.get ( '/currentColors', function ( req, res ) {
 	res.data.red = 220;
 	res.data.green = 200;
 	res.data.blue = 1;
+	res.send( { "data1": { "red": 220, "green": 200, "blue": 100 } } );
 	res.send( "currentColors" );
 });
 
