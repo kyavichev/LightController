@@ -37,7 +37,7 @@ app.get ( '/heartBeat', function ( req, res ) {
 app.get ( '/currentColors', function ( req, res ) {
 	console.log ( "currentColors" );
 	res.send( { "data": { "red": currentRed, "green": currentGreen, "blue": currentBlue } } );
-	res.send( "currentColors" );
+	//res.send( "currentColors" );
 });
 
 app.get ( '/allOn', function ( req, res ) {
@@ -115,21 +115,21 @@ app.post ( '/greenValue/', function ( req, res ) {
 app.get ( '/blueOn', function ( req, res ) {
 	console.log ( "blueOn" );
 	enableFade = false;
-	piblaster.setPwm( bluePinNumber, 1 );
+	setBlue( 1 );
 	res.send( "blueOn" );
 });
 
 app.get ( '/blueHalf', function ( req, res ) {
 	console.log ( "blueHalf" );
 	enableFade = false;
-	piblaster.setPwm( bluePinNumber, 0.5 );
+	setBlue( 0.5 );
 	res.send( "blueHalf" );
 });
 
 app.get ( '/blueOff', function ( req, res ) {
 	console.log ( "blueOff" );
 	enableFade = false;
-	piblaster.setPwm( bluePinNumber, 0 );
+	setBlue( 0 );
 	res.send( "blueOn" );
 });
 
@@ -137,7 +137,7 @@ app.post ( '/blueValue/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "blueValue: " + value );
 	enableFade = false;
-	piblaster.setPwm ( bluePinNumber, value );
+	setBlue( 0 );
 	res.send( "blueValue" );
 });
 
@@ -208,15 +208,21 @@ function setBlue ( value )
 
 function turnOnAll ()
 {
-	piblaster.setPwm( greenPinNumber, 1 );
-	piblaster.setPwm( redPinNumber, 1 );
-	piblaster.setPwm( bluePinNumber, 1 );
+	setRed( 1 );
+	setGreen( 1 );
+	setBlue( 1 );
+	// piblaster.setPwm( greenPinNumber, 1 );
+	// piblaster.setPwm( redPinNumber, 1 );
+	// piblaster.setPwm( bluePinNumber, 1 );
 }
 
 function turnOffAll ()
 {
-	piblaster.setPwm( greenPinNumber, 0 );
-	piblaster.setPwm( redPinNumber, 0 );
-	piblaster.setPwm( bluePinNumber, 0 );
+	setRed( 0 );
+	setGreen( 0 );
+	setBlue( 0 );
+	// piblaster.setPwm( greenPinNumber, 0 );
+	// piblaster.setPwm( redPinNumber, 0 );
+	// piblaster.setPwm( bluePinNumber, 0 );
 }
 
