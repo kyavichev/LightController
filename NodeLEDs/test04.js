@@ -175,11 +175,17 @@ u.on('Event',function ()
 	if ( enableFade )
 	{
 		colorCtrl += colorStep;
-		var fadeValue = Math.abs( Math.sin ( colorCtrl ) );
+
+		var minValue = 0.15;
+		var maxValue = 1;
+
+		var fadeValue = Math.abs(  Math.sin ( colorCtrl ) *  (maxValue - minValue) ) + minValue;
 		setRed( fadeValue );
-		fadeValue = Math.abs( Math.sin ( colorCtrl / 2 ) );
+
+		fadeValue = Math.abs(  Math.sin ( colorCtrl / 2 ) *  (maxValue - minValue) ) + minValue;
 		setGreen( fadeValue );
-		fadeValue = Math.abs( Math.sin ( colorCtrl / 1.25 ) );
+
+		fadeValue = Math.abs( Math.sin ( colorCtrl / 1.25 ) *  (maxValue - minValue) ) + minValue;
 		setBlue( fadeValue );
 
 		console.log ( "fadeValue: " + fadeValue );
