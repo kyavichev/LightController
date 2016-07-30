@@ -15,7 +15,7 @@ var redIsOpen = 0;
 var enableFade = false;
 var enableStrobe = false;
 var strobeOn = false;
-var strobeDuration = 0.25;
+var strobeDuration = 0.02;
 var colorStep = 0.01;
 var colorCtrl = 0;
 
