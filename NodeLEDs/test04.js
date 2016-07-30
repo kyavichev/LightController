@@ -13,6 +13,7 @@ var bluePinNumber = 24;
 
 var redIsOpen = 0;
 var enableFade = false;
+var enableStrobe = false;
 var colorStep = 0.01;
 var colorCtrl = 0;
 
@@ -42,6 +43,7 @@ app.get ( '/currentColors', function ( req, res ) {
 
 app.get ( '/allOn', function ( req, res ) {
 	console.log ( "all on" );
+	enableStrobe = false;
 	enableFade = false;
 	turnOnAll();
 	res.send( "allOn" );
@@ -49,6 +51,7 @@ app.get ( '/allOn', function ( req, res ) {
 
 app.get ( '/allOff', function ( req, res ) {
 	console.log ( "all off" );
+	enableStrobe = false;
 	enableFade = false;
 	turnOffAll();
 	res.send( "allOff" );
@@ -56,6 +59,7 @@ app.get ( '/allOff', function ( req, res ) {
 
 app.get ( '/redOn', function ( req, res ) {
 	console.log ( "redOn" );
+	enableStrobe = false;
 	enableFade = false;
 	setRed( 1 );
 	res.send( "redOn" );
@@ -63,6 +67,7 @@ app.get ( '/redOn', function ( req, res ) {
 
 app.get ( '/redHalf', function ( req, res ) {
 	console.log ( "redHalf" );
+	enableStrobe = false;
 	enableFade = false;
 	setRed( 0.5 );
 	res.send( "redHalf" );
@@ -70,6 +75,7 @@ app.get ( '/redHalf', function ( req, res ) {
 
 app.get ( '/redOff', function ( req, res ) {
 	console.log ( "redOff" );
+	enableStrobe = false;
 	enableFade = false;
 	setRed( 0 );
 	res.send( "redOff" );
@@ -78,6 +84,7 @@ app.get ( '/redOff', function ( req, res ) {
 app.post ( '/redValue/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "redValue: " + value );
+	enableStrobe = false;
 	enableFade = false;
 	setRed( value );
 	res.send( "redValue" );
@@ -85,6 +92,7 @@ app.post ( '/redValue/', function ( req, res ) {
 
 app.get ( '/greenOn', function ( req, res ) {
 	console.log ( "greenOn" );
+	enableStrobe = false;
 	enableFade = false;
 	setGreen( 1 );
 	res.send( "greenOn" );
@@ -92,6 +100,7 @@ app.get ( '/greenOn', function ( req, res ) {
 
 app.get ( '/greenHalf', function ( req, res ) {
 	console.log ( "greenHalf" );
+	enableStrobe = false;
 	enableFade = false;
 	setGreen( 0.5 );
 	res.send( "greenHalf" );
@@ -99,6 +108,7 @@ app.get ( '/greenHalf', function ( req, res ) {
 
 app.get ( '/greenOff', function ( req, res ) {
 	console.log ( "greenOff" );
+	enableStrobe = false;
 	enableFade = false;
 	setGreen( 0 );
 	res.send( "greenOff" );
@@ -107,6 +117,7 @@ app.get ( '/greenOff', function ( req, res ) {
 app.post ( '/greenValue/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "greenValue: " + value );
+	enableStrobe = false;
 	enableFade = false;
 	setGreen( value );
 	res.send( "greenValue" );
@@ -114,6 +125,7 @@ app.post ( '/greenValue/', function ( req, res ) {
 
 app.get ( '/blueOn', function ( req, res ) {
 	console.log ( "blueOn" );
+	enableStrobe = false;
 	enableFade = false;
 	setBlue( 1 );
 	res.send( "blueOn" );
@@ -121,6 +133,7 @@ app.get ( '/blueOn', function ( req, res ) {
 
 app.get ( '/blueHalf', function ( req, res ) {
 	console.log ( "blueHalf" );
+	enableStrobe = false;
 	enableFade = false;
 	setBlue( 0.5 );
 	res.send( "blueHalf" );
@@ -128,6 +141,7 @@ app.get ( '/blueHalf', function ( req, res ) {
 
 app.get ( '/blueOff', function ( req, res ) {
 	console.log ( "blueOff" );
+	enableStrobe = false;
 	enableFade = false;
 	setBlue( 0 );
 	res.send( "blueOn" );
@@ -136,6 +150,7 @@ app.get ( '/blueOff', function ( req, res ) {
 app.post ( '/blueValue/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "blueValue: " + value );
+	enableStrobe = false;
 	enableFade = false;
 	setBlue( 0 );
 	res.send( "blueValue" );
@@ -143,6 +158,7 @@ app.post ( '/blueValue/', function ( req, res ) {
 
 app.get ( '/fade', function ( req, res ) {
 	console.log( "fade" );
+	enableStrobe = false;
 	enableFade = true
 	res.send( "fade" );
 });
@@ -150,6 +166,7 @@ app.get ( '/fade', function ( req, res ) {
 app.get ( '/fade1', function ( req, res ) {
 	console.log( "fade1" );
 	colorStep = colorStep1;
+	enableStrobe = false;
 	enableFade = true;
 	res.send( "fade1" );
 });
@@ -157,9 +174,18 @@ app.get ( '/fade1', function ( req, res ) {
 app.get ( '/fade2', function ( req, res ) {
 	console.log( "fade2" );
 	colorStep = colorStep2;
+	enableStrobe = false;
 	enableFade = true;
 	res.send( "fade2" );
 });
+
+app.get ( '/strobe', function ( req, res ) {
+	console.log( "strobe" );
+	enableStrobe = true;
+	enableFade = false;
+	res.send( "strobe" );
+});
+
 
 var server = app.listen(app.get('port'), function() {
 	console.log('listening on port %d', server.address().port);
@@ -188,7 +214,20 @@ u.on('Event',function ()
 		fadeValue = Math.abs( Math.sin ( colorCtrl / 1.25 ) *  (maxValue - minValue) ) + minValue;
 		setBlue( fadeValue );
 
-		console.log ( "fadeValue: " + fadeValue );
+		//console.log ( "fadeValue: " + fadeValue );
+	}
+
+	if ( enableStrobe )
+	{
+		colorCtrl += colorStep;
+
+		var minValue = 0.15;
+		var maxValue = 1;
+
+		var fadeValue = Math.abs(  Math.sin ( colorCtrl * 10 ) *  (maxValue - minValue) ) + minValue;
+		setRed( fadeValue );
+		setGreen( fadeValue );
+		setBlue( fadeValue );
 	}
 });
 
