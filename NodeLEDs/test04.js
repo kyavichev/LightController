@@ -14,6 +14,8 @@ var bluePinNumber = 24;
 var redIsOpen = 0;
 var enableFade = false;
 var enableStrobe = false;
+var strobeOn = false;
+var strobeDuration = 10000;
 var colorStep = 0.01;
 var colorCtrl = 0;
 
@@ -216,18 +218,28 @@ u.on('Event',function ()
 
 		//console.log ( "fadeValue: " + fadeValue );
 	}
-
-	if ( enableStrobe )
+	else if ( enableStrobe )
 	{
 		colorCtrl += colorStep;
+		if ( colorCtrl > strobeDuration )
+		{
+			colorCtrl = 0;
 
-		var minValue = 0.15;
-		var maxValue = 1;
+			var colorValue = 0;
+			if ( strobeOn == true )
+			{
+				colorValue = 1;
+			}
+			else
+			{
+				colorValue = 0;
+			}
+			strobeOn = !strobeOn;
 
-		var fadeValue = Math.abs(  Math.sin ( colorCtrl * 10 ) *  (maxValue - minValue) ) + minValue;
-		setRed( fadeValue );
-		setGreen( fadeValue );
-		setBlue( fadeValue );
+			setRed( colorValue );
+			setGreen( colorValue );
+			setBlue( colorValue );
+		}
 	}
 });
 
