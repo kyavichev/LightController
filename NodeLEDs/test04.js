@@ -13,14 +13,15 @@ var bluePinNumber = 24;
 
 var redIsOpen = 0;
 var enableFade = false;
+var fadeRedModifier = 1;
+var fadeGreenModifier = 0.5;
+var fadeBlueModifier = 0.25;
 var enableStrobe = false;
 var strobeOn = false;
 var strobeDuration = 0.02;
+
 var colorStep = 0.01;
 var colorCtrl = 0;
-
-var colorStep1 = 0.01;
-var colorStep2 = 0.1;
 
 var currentRed = 0;
 var currentGreen = 0;
@@ -172,20 +173,11 @@ app.get ( '/fade', function ( req, res ) {
 	res.send( "fade" );
 });
 
-app.get ( '/fade1', function ( req, res ) {
-	console.log( "fade1" );
-	colorStep = colorStep1;
-	enableStrobe = false;
-	enableFade = true;
-	res.send( "fade1" );
-});
-
-app.get ( '/fade2', function ( req, res ) {
-	console.log( "fade2" );
-	colorStep = colorStep2;
-	enableStrobe = false;
-	enableFade = true;
-	res.send( "fade2" );
+app.post ( '/setFadeModifiers/', function ( req, res ) {
+	var redValue = parseFloat( req.body.fadeRedModifier );
+	console.log( "setFadeModifiers: " + redValue );
+	fadeRedModifier = redValue;
+	res.send( "setFadeModifiers" );
 });
 
 app.get ( '/strobe', function ( req, res ) {
@@ -214,13 +206,13 @@ u.on('Event',function ()
 		var minValue = 0.15;
 		var maxValue = 1;
 
-		var fadeValue = Math.abs(  Math.sin ( colorCtrl ) *  (maxValue - minValue) ) + minValue;
+		var fadeValue = Math.abs(  Math.sin ( colorCtrl * fadeRedModifier ) * (maxValue - minValue) ) + minValue;
 		setRed( fadeValue );
 
-		fadeValue = Math.abs(  Math.sin ( colorCtrl / 2 ) *  (maxValue - minValue) ) + minValue;
+		fadeValue = Math.abs(  Math.sin ( colorCtrl * fadeGreenModifier ) * (maxValue - minValue) ) + minValue;
 		setGreen( fadeValue );
 
-		fadeValue = Math.abs( Math.sin ( colorCtrl / 1.25 ) *  (maxValue - minValue) ) + minValue;
+		fadeValue = Math.abs( Math.sin ( colorCtrl * fadeBlueModifier ) * (maxValue - minValue) ) + minValue;
 		setBlue( fadeValue );
 
 		//console.log ( "fadeValue: " + fadeValue );
