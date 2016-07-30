@@ -43,6 +43,13 @@ app.get ( '/currentColors', function ( req, res ) {
 	//res.send( "currentColors" );
 });
 
+app.post ( '/colorStep/', function ( req, res ) {
+	var value = parseFloat( req.body.value );
+	console.log( "colorStep: " + value );
+	colorStep = value;
+	res.send( "colorStep" );
+});
+
 app.get ( '/allOn', function ( req, res ) {
 	console.log ( "all on" );
 	enableStrobe = false;
