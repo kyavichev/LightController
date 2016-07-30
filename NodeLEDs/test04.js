@@ -221,6 +221,7 @@ u.on('Event',function ()
 	else if ( enableStrobe )
 	{
 		colorCtrl += colorStep;
+		console.log ( "colorCtrl: " + colorCtrl );
 		if ( colorCtrl > strobeDuration )
 		{
 			colorCtrl = 0;
@@ -235,6 +236,8 @@ u.on('Event',function ()
 				colorValue = 0;
 			}
 			strobeOn = !strobeOn;
+
+			console.log ( "color value: " + colorValue );
 
 			setRed( colorValue );
 			setGreen( colorValue );
