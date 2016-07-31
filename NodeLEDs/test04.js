@@ -175,8 +175,11 @@ app.get ( '/fade', function ( req, res ) {
 
 app.post ( '/setFadeModifiers/', function ( req, res ) {
 	var redValue = parseFloat( req.body.fadeRedModifier );
-	console.log( "setFadeModifiers: " + redValue );
+	var greenValue = parseFloat( req.body.fadeGreenModifier );
+	var blueValue = parseFloat( req.body.fadeGreenModifier );
+	console.log( "setFadeModifiers: ( " + redValue + ", " + greenValue + ", " + blueValue );
 	fadeRedModifier = redValue;
+	fadeGreenModifier = greenValue;
 	res.send( "setFadeModifiers" );
 });
 
@@ -193,7 +196,7 @@ var server = app.listen(app.get('port'), function() {
 });
 
 
-var timeStep = 100;
+var timeStep = 10;
 var u = new Updater(timeStep);
 u.init();
 u.on('Event',function () 
