@@ -182,7 +182,7 @@ app.get ( '/fade', function ( req, res ) {
 app.post ( '/setFadeModifiers/', function ( req, res ) {
 	var redValue = parseFloat( req.body.fadeRedModifier );
 	var greenValue = parseFloat( req.body.fadeGreenModifier );
-	var blueValue = parseFloat( req.body.fadeGreenModifier );
+	var blueValue = parseFloat( req.body.fadeBlueModifier );
 	console.log( "setFadeModifiers: ( " + redValue + ", " + greenValue + ", " + blueValue );
 	fadeRedModifier = redValue;
 	fadeGreenModifier = greenValue;
