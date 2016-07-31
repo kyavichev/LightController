@@ -13,14 +13,14 @@ var bluePinNumber = 24;
 
 var redIsOpen = 0;
 var enableFade = false;
-var fadeRedModifier = 1;
-var fadeGreenModifier = 0.5;
-var fadeBlueModifier = 0.25;
+var fadeRedModifier = 0.268;
+var fadeGreenModifier = 0.1529;
+var fadeBlueModifier = 0.5156;
 var enableStrobe = false;
 var strobeOn = false;
-var strobeDuration = 0.02;
+var strobeDuration = 0.002;
 
-var colorStep = 0.01;
+var colorStep = 0.006;
 var colorCtrl = 0;
 
 var currentRed = 0;
