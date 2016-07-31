@@ -44,6 +44,12 @@ app.get ( '/currentColors', function ( req, res ) {
 	//res.send( "currentColors" );
 });
 
+app.get ( '/currentStatus', function ( req, res ) {
+	console.log ( "currentStatus" );
+	res.send( { "data": { "red": currentRed, "green": currentGreen, "blue": currentBlue, "colorStep": colorStep, "enableFade": enableFade, "enableStrobe": enableStrobe } } );
+	//res.send( "currentColors" );
+});
+
 app.post ( '/colorStep/', function ( req, res ) {
 	var value = parseFloat( req.body.value );
 	console.log( "colorStep: " + value );
@@ -180,6 +186,7 @@ app.post ( '/setFadeModifiers/', function ( req, res ) {
 	console.log( "setFadeModifiers: ( " + redValue + ", " + greenValue + ", " + blueValue );
 	fadeRedModifier = redValue;
 	fadeGreenModifier = greenValue;
+	fadeBlueModifier = blueValue;
 	res.send( "setFadeModifiers" );
 });
 
