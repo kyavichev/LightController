@@ -20,6 +20,21 @@ class ViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var greenColorLabel: UILabel!
     @IBOutlet weak var blueColorLabel: UILabel!
     
+    @IBOutlet weak var redSlider : UISlider!
+    @IBOutlet weak var greenSlider : UISlider!
+    @IBOutlet weak var blueSlider : UISlider!
+    
+    @IBOutlet weak var fadeRedModifierSlider : UISlider!
+    @IBOutlet weak var fadeGreenModifierSlider : UISlider!
+    @IBOutlet weak var fadeBlueModifierSlider : UISlider!
+    
+    @IBOutlet weak var fadeRedModifierLabel: UILabel!
+    @IBOutlet weak var fadeGreenModifierLabel: UILabel!
+    @IBOutlet weak var fadeBlueModifierLabel: UILabel!
+    
+    @IBOutlet weak var colorStepSlider : UISlider!
+    @IBOutlet weak var colorStepLabel : UILabel!
+    
 
     override func viewDidLoad()
     {
@@ -30,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate
         self.urlTextField.delegate = self;
         
         NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.checkHeartBeat), userInfo: nil, repeats: true)
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.getColors), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.getStatus), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,7 +95,7 @@ class ViewController: UIViewController, UITextFieldDelegate
     }
     
     
-    func getColors ()
+    func getStatus ()
     {
         NSLog( "Getting colors" );
         
@@ -110,6 +125,11 @@ class ViewController: UIViewController, UITextFieldDelegate
                     let red = String( jsonDataMap?.objectForKey( "red" ) as! Int )
                     let green = String ( jsonDataMap?.objectForKey( "green" ) as! Int )
                     let blue = String( jsonDataMap?.objectForKey( "blue" ) as! Int )
+                    let colorStep = jsonDataMap?.objectForKey( "colorStep" ) as! Float
+                    
+                    let fadeRedModifierValue = jsonDataMap?.objectForKey( "fadeRedModifier" ) as! Float
+                    let fadeGreenModifierValue = jsonDataMap?.objectForKey( "fadeGreenModifier" ) as! Float
+                    let fadeBlueModifierValue = jsonDataMap?.objectForKey( "fadeBlueModifier" ) as! Float
                     
                 
                     dispatch_async(dispatch_get_main_queue(), {
@@ -117,13 +137,27 @@ class ViewController: UIViewController, UITextFieldDelegate
                         self.redColorLabel.text = red;
                         self.greenColorLabel.text = green;
                         self.blueColorLabel.text = blue;
+                        
+                        self.redSlider.value = Float ( (jsonDataMap?.objectForKey( "red" ) as! Float) / 255.0 )
+                        self.greenSlider.value = Float ( (jsonDataMap?.objectForKey( "green" ) as! Float) / 255.0 )
+                        self.blueSlider.value = Float ( (jsonDataMap?.objectForKey( "blue" ) as! Float) / 255.0 )
+                        
+                        self.colorStepSlider.value = colorStep;
+                        self.colorStepLabel.text = "\(colorStep)"
+                        
+                        self.fadeRedModifierSlider.value = fadeRedModifierValue;
+                        self.fadeRedModifierLabel.text = "\(fadeRedModifierValue)"
+                        self.fadeGreenModifierSlider.value = fadeGreenModifierValue
+                        self.fadeGreenModifierLabel.text = "\(fadeGreenModifierValue)"
+                        self.fadeBlueModifierSlider.value = fadeBlueModifierValue
+                        self.fadeBlueModifierLabel.text = "\(fadeBlueModifierValue)"
                     })
                 }
             }
                 
         }
         
-        self.sendGetRequest3( "currentColors", completionHandler:completionHandler)
+        self.sendGetRequest3( "currentStatus", completionHandler:completionHandler)
     }
     
     
@@ -232,13 +266,24 @@ class ViewController: UIViewController, UITextFieldDelegate
     @IBAction func fadeButton(sender: UIButton)
     {
         NSLog( "Fade Button!" );
-        self.sendGetRequest2( "fade1" );
+        self.sendGetRequest2( "fade" );
     }
     
-    @IBAction func fade2Button(sender: UIButton)
+    @IBAction func fadeModifierSliderValueChanged(sender: UISlider)
     {
-        NSLog( "Fade 2 Button!" );
-        self.sendGetRequest2( "fade2" );
+        NSLog( "Fade Red Modifier Slider Value Change!" );
+        let params = ["fadeRedModifier":"\(self.fadeRedModifierSlider.value)", "fadeGreenModifier":"\(self.fadeGreenModifierSlider.value)", "fadeBlueModifier": "\(self.fadeBlueModifierSlider.value)" ] as Dictionary<String, String>
+        self.sendPostRequest( "setFadeModifiers/", params: params )
+        
+        self.fadeRedModifierLabel.text = "\(self.fadeRedModifierSlider.value)"
+        self.fadeGreenModifierLabel.text = "\(self.fadeGreenModifierSlider.value)"
+        self.fadeBlueModifierLabel.text = "\(self.fadeBlueModifierSlider.value)"
+    }
+    
+    @IBAction func strobeButton(sender: UIButton)
+    {
+        NSLog( "Strobe Button!" );
+        self.sendGetRequest2( "strobe" );
     }
     
     @IBAction func allOnButton(sender: UIButton)
@@ -251,6 +296,19 @@ class ViewController: UIViewController, UITextFieldDelegate
     {
         NSLog( "All Off Button!" );
         self.sendGetRequest2( "allOff" );
+    }
+    
+    
+    @IBAction func colorStepSliderValueChanged(sender: UISlider)
+    {
+        NSLog( "Color Step Slider Value Change!" );
+        let params = ["value":"\(sender.value)", "test":"abcd"] as Dictionary<String, String>
+        self.sendPostRequest( "colorStep/", params: params )
+        
+        if ( self.colorStepLabel != nil)
+        {
+            self.colorStepLabel.text = "\(Double(round(1000*sender.value)/1000))";
+        }
     }
     
     
