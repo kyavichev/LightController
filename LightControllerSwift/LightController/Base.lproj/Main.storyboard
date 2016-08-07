@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -44,177 +44,6 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-kT-yXA" userLabel="Blue Color Label">
-                                <rect key="frame" x="250" y="61" width="100" height="25"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-6h-zmX">
-                                <rect key="frame" x="20" y="92" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="RED ON">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="redOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6bx-l7-8fw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQt-0w-usr" userLabel="RED Half">
-                                <rect key="frame" x="135" y="92" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="RED HALF">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="redHalfButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbG-es-PyK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPH-nj-afG">
-                                <rect key="frame" x="250" y="92" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="RED OFF">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="redOffButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yg4-A6-Tgd"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-bf-Kp2" userLabel="Horizontal Slider Red">
-                                <rect key="frame" x="18" y="150" width="334" height="31"/>
-                                <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="redSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uyb-Ya-JVo"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-qs-vgh" userLabel="GREEN ON">
-                                <rect key="frame" x="20" y="188" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="GREEN ON">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="greenOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbZ-B1-88T"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-WA-baX" userLabel="GREEN Half">
-                                <rect key="frame" x="135" y="188" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="GREEN HALF">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="greenHalfButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxI-C8-1bz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNh-fm-VpU" userLabel="GREEN OFF">
-                                <rect key="frame" x="250" y="188" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="GREEN OFF">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="greenOffButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK1-LL-hRK"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pWC-eI-4h8" userLabel="Horizontal Slider Green">
-                                <rect key="frame" x="18" y="247" width="334" height="31"/>
-                                <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="greenSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E03-NP-AzL"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtI-6O-o1V" userLabel="BLUE ON">
-                                <rect key="frame" x="20" y="285" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="BLUE ON">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="blueOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dae-GU-MwS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEg-nJ-Jnu" userLabel="BLUE Half">
-                                <rect key="frame" x="135" y="285" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="BLUE HALF">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="blueHalfButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I34-Ma-tAY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-Bm-hJc" userLabel="BLUE OFF">
-                                <rect key="frame" x="250" y="285" width="100" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="BLUE OFF">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="blueOffButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QpT-9O-W56"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="viA-xr-Pys" userLabel="Horizontal Slider Blue">
-                                <rect key="frame" x="18" y="343" width="334" height="31"/>
-                                <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="blueSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nlx-mc-6RL"/>
-                                </connections>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIn-0v-5D4" userLabel="All ON">
-                                <rect key="frame" x="20" y="381" width="150" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="ALL ON">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="allOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLY-cN-FQi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-t7-rJf" userLabel="All OFF">
-                                <rect key="frame" x="200" y="381" width="150" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="ALL OFF">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="allOffButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sfr-RL-3z5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-BY-iT9" userLabel="Fade">
-                                <rect key="frame" x="20" y="439" width="150" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="FADE">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="fadeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghe-DM-BiT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m07-t9-4OH" userLabel="Strone">
-                                <rect key="frame" x="200" y="439" width="150" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
-                                <state key="normal" title="STROBE">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="strobeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zyg-dX-dI4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-qw-yXL" userLabel="Green Color Label">
                                 <rect key="frame" x="135" y="61" width="100" height="25"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,58 +51,162 @@
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gbU-IT-4lo" userLabel="ColorStep">
-                                <rect key="frame" x="18" y="509" width="272" height="31"/>
-                                <color key="thumbTintColor" red="0.92622180451127822" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="colorStepSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lWl-A5-0bH"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mo-g5-J2f" userLabel="ColorStepLabel">
-                                <rect key="frame" x="289" y="513" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-kT-yXA" userLabel="Blue Color Label">
+                                <rect key="frame" x="250" y="61" width="100" height="25"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="R8r-DB-5JD" userLabel="RedFadeModifier">
-                                <rect key="frame" x="18" y="547" width="272" height="31"/>
-                                <color key="thumbTintColor" red="0.92622180451127822" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N5K-vO-DHv"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFx-zp-dL4" userLabel="RedFadeModifierLabel">
-                                <rect key="frame" x="289" y="551" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-y4-sui" userLabel="GreenFadeModifier">
-                                <rect key="frame" x="18" y="585" width="272" height="31"/>
-                                <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lOa-Xw-eig"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-Fw-mEG" userLabel="GreenFadeModifierLabel">
-                                <rect key="frame" x="289" y="589" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-Wc-SsY" userLabel="BlueFadeModifier">
-                                <rect key="frame" x="18" y="623" width="272" height="31"/>
-                                <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fFd-Sy-zNG"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrS-Ib-Zxr" userLabel="BlueFadeModifierLabel">
-                                <rect key="frame" x="289" y="627" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-au-i0T" userLabel="ColorView">
+                                <rect key="frame" x="10" y="95" width="350" height="146"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-bf-Kp2" userLabel="Horizontal Slider Red">
+                                        <rect key="frame" x="8" y="29" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="onRedSliderDragEnd:" destination="BYZ-38-t0r" eventType="touchDragExit" id="uCK-if-4fz"/>
+                                            <action selector="onRedSliderDragStart:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="8dp-sv-qTf"/>
+                                            <action selector="redSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uyb-Ya-JVo"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="viA-xr-Pys" userLabel="Horizontal Slider Blue">
+                                        <rect key="frame" x="8" y="104" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="blueSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nlx-mc-6RL"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pWC-eI-4h8" userLabel="Horizontal Slider Green">
+                                        <rect key="frame" x="8" y="67" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="greenSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E03-NP-AzL"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5g-aM-qV4" userLabel="Ip Label">
+                                        <rect key="frame" x="8" y="5" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.30105377906976744" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uot-uD-KgC" userLabel="FadeControlsView">
+                                <rect key="frame" x="10" y="249" width="350" height="134"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-t7-rJf" userLabel="All OFF">
+                                        <rect key="frame" x="180" y="12" width="150" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                        <state key="normal" title="ALL OFF">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="allOffButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sfr-RL-3z5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-BY-iT9" userLabel="Fade">
+                                        <rect key="frame" x="22" y="70" width="150" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                        <state key="normal" title="FADE">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fadeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghe-DM-BiT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m07-t9-4OH" userLabel="Strone">
+                                        <rect key="frame" x="180" y="70" width="150" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                        <state key="normal" title="STROBE">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="strobeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zyg-dX-dI4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIn-0v-5D4" userLabel="All ON">
+                                        <rect key="frame" x="22" y="12" width="150" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                        <state key="normal" title="ALL ON">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="allOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLY-cN-FQi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.29802567829457366" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQ8-Hn-azu" userLabel="Fade Strobe Controls View">
+                                <rect key="frame" x="10" y="391" width="350" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Step" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPr-Co-Tr4" userLabel="ColorStepLabel">
+                                        <rect key="frame" x="4" y="1" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gbU-IT-4lo" userLabel="ColorStep">
+                                        <rect key="frame" x="6" y="21" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.92622180451127822" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="colorStepSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lWl-A5-0bH"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mo-g5-J2f" userLabel="ColorStepLabel">
+                                        <rect key="frame" x="284" y="25" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="R8r-DB-5JD" userLabel="RedFadeModifier">
+                                        <rect key="frame" x="6" y="72" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.92622180451127822" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N5K-vO-DHv"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFx-zp-dL4" userLabel="RedFadeModifierLabel">
+                                        <rect key="frame" x="284" y="77" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-y4-sui" userLabel="GreenFadeModifier">
+                                        <rect key="frame" x="6" y="115" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lOa-Xw-eig"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-Fw-mEG" userLabel="GreenFadeModifierLabel">
+                                        <rect key="frame" x="284" y="119" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-Wc-SsY" userLabel="BlueFadeModifier">
+                                        <rect key="frame" x="6" y="151" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fFd-Sy-zNG"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrS-Ib-Zxr" userLabel="BlueFadeModifierLabel">
+                                        <rect key="frame" x="284" y="155" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.56862745100000001" blue="0.63137254899999995" alpha="1" colorSpace="deviceRGB"/>
                     </view>

@@ -35,6 +35,10 @@ class ViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var colorStepSlider : UISlider!
     @IBOutlet weak var colorStepLabel : UILabel!
     
+    
+    var isRedSliderDragged : Bool!
+    
+    
 
     override func viewDidLoad()
     {
@@ -43,6 +47,8 @@ class ViewController: UIViewController, UITextFieldDelegate
         // Do any additional setup after loading the view, typically from a nib.
         
         self.urlTextField.delegate = self;
+        
+        self.isRedSliderDragged = false;
         
         NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.checkHeartBeat), userInfo: nil, repeats: true)
         NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.getStatus), userInfo: nil, repeats: true)
@@ -138,7 +144,11 @@ class ViewController: UIViewController, UITextFieldDelegate
                         self.greenColorLabel.text = green;
                         self.blueColorLabel.text = blue;
                         
-                        self.redSlider.value = Float ( (jsonDataMap?.objectForKey( "red" ) as! Float) / 255.0 )
+                        if ( !self.isRedSliderDragged )
+                        {
+                            self.redSlider.value = Float ( (jsonDataMap?.objectForKey( "red" ) as! Float) / 255.0 )
+                        }
+                        
                         self.greenSlider.value = Float ( (jsonDataMap?.objectForKey( "green" ) as! Float) / 255.0 )
                         self.blueSlider.value = Float ( (jsonDataMap?.objectForKey( "blue" ) as! Float) / 255.0 )
                         
@@ -211,6 +221,16 @@ class ViewController: UIViewController, UITextFieldDelegate
         NSLog( "Red Slider Value Change!" );
         let params = ["value":"\(sender.value)", "test":"abcd"] as Dictionary<String, String>
         self.sendPostRequest( "redValue/", params: params )
+    }
+    
+    @IBAction func onRedSliderDragStart(sender: UISlider)
+    {
+        self.isRedSliderDragged = true;
+    }
+    
+    @IBAction func onRedSliderDragEnd(sender: UISlider)
+    {
+        self.isRedSliderDragged = false;
     }
     
     @IBAction func greenOnButton(sender: UIButton)
