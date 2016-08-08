@@ -1,14 +1,220 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wpU-Uc-fS5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Strobe-->
+        <scene sceneID="DGJ-bl-QTG">
+            <objects>
+                <viewController id="Uer-FN-pff" userLabel="Strobe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hK8-xY-WGf"/>
+                        <viewControllerLayoutGuide type="bottom" id="kuV-3R-yPG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m0j-G6-ES0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Strobe" id="ba7-Ck-p94"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaQ-b8-FsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="998"/>
+        </scene>
+        <!--Fade-->
+        <scene sceneID="a1Y-5B-JPF">
+            <objects>
+                <viewController id="dFL-yE-vwh" userLabel="Fade" customClass="FadeTabViewController" customModule="LightController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cyd-J0-6qc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sqp-HQ-Wgf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SOJ-SK-Hea">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvj-L3-ZtL" userLabel="ColorRangeView">
+                                <rect key="frame" x="20" y="28" width="350" height="359"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colors Limits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQb-Vy-GoT" userLabel="Header Label">
+                                        <rect key="frame" x="2" y="3" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red [0 - 255]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJj-Sf-Fi5" userLabel="Red Label">
+                                        <rect key="frame" x="12" y="32" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-CW-uMo" userLabel="Horizontal Slider Red Min">
+                                        <rect key="frame" x="8" y="61" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="redRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="tAw-MD-bim"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LM6-6r-caS" userLabel="Horizontal Slider Red Max">
+                                        <rect key="frame" x="10" y="99" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="redRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="DLI-Bv-2QK"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green [0 - 255]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUk-dj-m1Q" userLabel="Green Label">
+                                        <rect key="frame" x="12" y="137" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-VK-NuH" userLabel="Horizontal Slider Green Min">
+                                        <rect key="frame" x="8" y="166" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="greenRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="Qsa-wP-Sf5"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yVq-bj-vif" userLabel="Horizontal Slider Green Max">
+                                        <rect key="frame" x="8" y="204" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="greenRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="dV1-1U-soh"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XPQ-UI-jqM" userLabel="Horizontal Slider Blue Min">
+                                        <rect key="frame" x="8" y="271" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="blueRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="cYp-wl-bJO"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Orv-6E-nZH" userLabel="Horizontal Slider Blue Max">
+                                        <rect key="frame" x="8" y="309" width="334" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="blueRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="uC9-JH-RKd"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue [0 - 255]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-He-sgl" userLabel="Blue Label">
+                                        <rect key="frame" x="8" y="242" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.30105377909999997" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-7W-9vi" userLabel="Fade Strobe Controls View">
+                                <rect key="frame" x="20" y="395" width="350" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Step" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-H3-ThW" userLabel="ColorStepLabel">
+                                        <rect key="frame" x="4" y="1" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0010000000474974513" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-2n-b3M" userLabel="ColorStep">
+                                        <rect key="frame" x="6" y="21" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.92622180450000002" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="colorStepSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="p4e-7u-u3H"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wa-Ki-QrD" userLabel="ColorStepLabel">
+                                        <rect key="frame" x="284" y="25" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0099999997764825821" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-70-Bbg" userLabel="RedFadeModifier">
+                                        <rect key="frame" x="6" y="72" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.92622180450000002" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jXJ-gB-vVP"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-Cl-wUH" userLabel="RedFadeModifierLabel">
+                                        <rect key="frame" x="284" y="77" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0099999997764825821" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-G5-G4j" userLabel="GreenFadeModifier">
+                                        <rect key="frame" x="6" y="115" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EhX-rB-NUO"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHL-AE-HoX" userLabel="GreenFadeModifierLabel">
+                                        <rect key="frame" x="284" y="119" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0099999997764825821" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="qnx-hW-3Bi" userLabel="BlueFadeModifier">
+                                        <rect key="frame" x="6" y="151" width="272" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cAE-Dq-ddF"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-gn-EFt" userLabel="BlueFadeModifierLabel">
+                                        <rect key="frame" x="284" y="155" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.054901960780000002" green="0.56862745100000001" blue="0.63137254899999995" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fade Controls" id="E6V-lC-HUu"/>
+                    <connections>
+                        <outlet property="blueRangeLabel" destination="PW5-He-sgl" id="fHU-Ak-VZu"/>
+                        <outlet property="blueRangeMaxSlider" destination="Orv-6E-nZH" id="2da-Wa-550"/>
+                        <outlet property="blueRangeMinSlider" destination="XPQ-UI-jqM" id="5H2-Q9-6SD"/>
+                        <outlet property="greenRangeLabel" destination="xUk-dj-m1Q" id="kEf-nj-cNz"/>
+                        <outlet property="greenRangeMaxSlider" destination="yVq-bj-vif" id="BxN-dd-1WM"/>
+                        <outlet property="greenRangeMinSlider" destination="CWV-VK-NuH" id="P66-7P-9cf"/>
+                        <outlet property="redRangeLabel" destination="jJj-Sf-Fi5" id="Lvm-wT-Wdo"/>
+                        <outlet property="redRangeMaxSlider" destination="LM6-6r-caS" id="qc9-11-uo1"/>
+                        <outlet property="redRangeMinSlider" destination="gKo-CW-uMo" id="Nyh-CB-tMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngx-th-7sM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1402" y="998"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pMs-Ue-kyH">
+            <objects>
+                <tabBarController id="wpU-Uc-fS5" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="Ny0-vy-toU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="toG-eG-yiv"/>
+                        <segue destination="dFL-yE-vwh" kind="relationship" relationship="viewControllers" id="veR-dF-JkS"/>
+                        <segue destination="Uer-FN-pff" kind="relationship" relationship="viewControllers" id="U5D-fG-k05"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9r-bx-l00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1412" y="-253"/>
+        </scene>
+        <!--Basic-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LightController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Basic" customClass="ViewController" customModule="LightController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -210,6 +416,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.56862745100000001" blue="0.63137254899999995" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Basic" id="F2Z-Tg-HHs" userLabel="Basic"/>
                     <connections>
                         <outlet property="blueColorLabel" destination="a4m-kT-yXA" id="8O2-zn-cWq"/>
                         <outlet property="blueSlider" destination="viA-xr-Pys" id="Iqn-o1-bpL"/>
@@ -231,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="316"/>
+            <point key="canvasLocation" x="-2171" y="998"/>
         </scene>
     </scenes>
 </document>

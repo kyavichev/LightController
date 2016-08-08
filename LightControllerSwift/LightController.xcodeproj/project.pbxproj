@@ -13,6 +13,8 @@
 		B59A46DC1C35D2D4007AB65A /* LightController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59A46DA1C35D2D4007AB65A /* LightController.xcdatamodeld */; };
 		B59A46DE1C35D2D4007AB65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59A46DD1C35D2D4007AB65A /* Assets.xcassets */; };
 		B59A46E11C35D2D4007AB65A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59A46DF1C35D2D4007AB65A /* LaunchScreen.storyboard */; };
+		B5DCEBF71D57E85A00B5EC48 /* FadeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DCEBF61D57E85A00B5EC48 /* FadeTabViewController.swift */; };
+		B5DCEBF91D57EC4A00B5EC48 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DCEBF81D57EC4A00B5EC48 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B59A46DD1C35D2D4007AB65A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B59A46E01C35D2D4007AB65A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B59A46E21C35D2D4007AB65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5DCEBF61D57E85A00B5EC48 /* FadeTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTabViewController.swift; sourceTree = "<group>"; };
+		B5DCEBF81D57EC4A00B5EC48 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				B59A46D31C35D2D4007AB65A /* AppDelegate.swift */,
 				B59A46D51C35D2D4007AB65A /* ViewController.swift */,
+				B5DCEBF61D57E85A00B5EC48 /* FadeTabViewController.swift */,
 				B59A46D71C35D2D4007AB65A /* Main.storyboard */,
 				B59A46DD1C35D2D4007AB65A /* Assets.xcassets */,
 				B59A46DF1C35D2D4007AB65A /* LaunchScreen.storyboard */,
 				B59A46E21C35D2D4007AB65A /* Info.plist */,
 				B59A46DA1C35D2D4007AB65A /* LightController.xcdatamodeld */,
+				B5DCEBF81D57EC4A00B5EC48 /* NetworkManager.swift */,
 			);
 			path = LightController;
 			sourceTree = "<group>";
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DCEBF71D57E85A00B5EC48 /* FadeTabViewController.swift in Sources */,
 				B59A46DC1C35D2D4007AB65A /* LightController.xcdatamodeld in Sources */,
+				B5DCEBF91D57EC4A00B5EC48 /* NetworkManager.swift in Sources */,
 				B59A46D61C35D2D4007AB65A /* ViewController.swift in Sources */,
 				B59A46D41C35D2D4007AB65A /* AppDelegate.swift in Sources */,
 			);
