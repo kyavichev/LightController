@@ -42,7 +42,20 @@ class ViewController: UIViewController, UITextFieldDelegate
         let barViewControllers = self.tabBarController?.viewControllers
         self.fadeViewController = barViewControllers![1] as! FadeTabViewController
         
+        // defaults
         self.isRedSliderDragged = false;
+        
+        // system defaults
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.grayColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Selected)
+        
+        let attributes: [String: AnyObject] = [NSFontAttributeName:UIFont(name: "Arial", size: 16)!, NSForegroundColorAttributeName: UIColor.grayColor()]
+        UITabBarItem.appearance().setTitleTextAttributes(attributes, forState: .Normal)
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
         
         NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(ViewController.checkHeartBeat), userInfo: nil, repeats: true)
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.getStatus), userInfo: nil, repeats: true)

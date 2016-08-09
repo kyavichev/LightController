@@ -53,6 +53,8 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-CW-uMo" userLabel="Horizontal Slider Red Min">
                                         <rect key="frame" x="8" y="61" width="334" height="31"/>
+                                        <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <action selector="redRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="tAw-MD-bim"/>
@@ -60,6 +62,8 @@
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LM6-6r-caS" userLabel="Horizontal Slider Red Max">
                                         <rect key="frame" x="10" y="99" width="334" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <action selector="redRangeSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="DLI-Bv-2QK"/>

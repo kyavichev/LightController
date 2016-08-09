@@ -53,7 +53,21 @@ app.get ( '/currentColors', function ( req, res ) {
 
 app.get ( '/currentStatus', function ( req, res ) {
 	console.log ( "currentStatus" );
-	res.send( { "data": { "red": currentRed, "green": currentGreen, "blue": currentBlue, "colorStep": colorStep, "enableFade": enableFade, "enableStrobe": enableStrobe, "fadeRedModifier": fadeRedModifier, "fadeGreenModifier": fadeGreenModifier, "fadeBlueModifier": fadeBlueModifier } } );
+	res.send( { 
+				"data": 
+				{ 
+					"red": currentRed, "green": currentGreen, "blue": currentBlue,
+					"colorStep": colorStep, 
+					"enableFade": enableFade, "enableStrobe": enableStrobe,
+					"fadeRedModifier": fadeRedModifier, "fadeGreenModifier": fadeGreenModifier, "fadeBlueModifier": fadeBlueModifier,
+					"colorLimits": 
+					{
+						"redMin": redMin, "redMax": redMax, 
+						"greenMin": greenMin, "greenMax": greenMax,
+						"blueMin": blueMin, "blueMax": blueMax
+					}
+				} 
+			} );
 	//res.send( "currentColors" );
 });
 
