@@ -12,7 +12,7 @@ var greenPinNumber = 17;
 var bluePinNumber = 24;
 
 var redIsOpen = 0;
-var enableFade = false;
+var enableFade = true;
 var fadeRedModifier = 0.268;
 var fadeGreenModifier = 0.1529;
 var fadeBlueModifier = 0.5156;
