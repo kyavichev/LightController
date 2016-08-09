@@ -27,6 +27,13 @@ var currentRed = 0;
 var currentGreen = 0;
 var currentBlue = 0;
 
+var redMin = 0;
+var redMax = 1;
+var greenMin = 0;
+var greenMax = 1;
+var blueMin = 0;
+var blueMax = 1;
+
 turnOffAll();
 var app = express();
 app.use(bodyParser.json());
@@ -197,6 +204,36 @@ app.get ( '/strobe', function ( req, res ) {
 	res.send( "strobe" );
 });
 
+app.post ( '/colorLimit/'function ( req, res ) {
+
+	if ( req.body.redMin )
+	{
+		redMin = parseFloat( req.body.redMin );
+	}
+	if ( req.body.redMax )
+	{
+		redMax = parseFloat( req.body.redMax );
+	}
+	if ( req.body.greenMin )
+	{
+		greenMin = parseFloat( req.body.greenMin );
+	}
+	if ( req.body.greenMax )
+	{
+		greenMax = parseFloat( req.body.greenMax );
+	}
+	if ( req.body.blueMin )
+	{
+		blueMin = parseFloat( req.body.blueMin );
+	}
+	if ( req.body.blueMax )
+	{
+		blueMax = parseFloat( req.body.blueMax );
+	}
+	console.log( "colorLimit: ( " + redMin + " - " + redMax + ", " + greenMin + " - " + greenMax + ", " + blueMin + " - " + blueMax + " ) " );
+
+	res.send( "colorLimit" );
+});
 
 var server = app.listen(app.get('port'), function() {
 	console.log('listening on port %d', server.address().port);
@@ -216,13 +253,13 @@ u.on('Event',function ()
 		var minValue = 0.15;
 		var maxValue = 1;
 
-		var fadeValue = Math.abs(  Math.sin ( colorCtrl * fadeRedModifier ) * (maxValue - minValue) ) + minValue;
+		var fadeValue = Math.abs(  Math.sin ( colorCtrl * fadeRedModifier ) * (redMax - redMin) ) + redMin;
 		setRed( fadeValue );
 
-		fadeValue = Math.abs(  Math.sin ( colorCtrl * fadeGreenModifier ) * (maxValue - minValue) ) + minValue;
+		fadeValue = Math.abs(  Math.sin ( colorCtrl * fadeGreenModifier ) * (greenMax - greenMin) ) + greenMin;
 		setGreen( fadeValue );
 
-		fadeValue = Math.abs( Math.sin ( colorCtrl * fadeBlueModifier ) * (maxValue - minValue) ) + minValue;
+		fadeValue = Math.abs( Math.sin ( colorCtrl * fadeBlueModifier ) * (blueMax - blueMin) ) + blueMin;
 		setBlue( fadeValue );
 
 		//console.log ( "fadeValue: " + fadeValue );
@@ -294,4 +331,5 @@ function turnOffAll ()
 	// piblaster.setPwm( redPinNumber, 0 );
 	// piblaster.setPwm( bluePinNumber, 0 );
 }
+
 
