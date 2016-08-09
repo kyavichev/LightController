@@ -16,7 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="m0j-G6-ES0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.054901960784313725" green="0.56862745098039214" blue="0.63137254901960782" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Strobe" id="ba7-Ck-p94"/>
                 </viewController>
@@ -37,18 +37,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvj-L3-ZtL" userLabel="ColorRangeView">
-                                <rect key="frame" x="20" y="28" width="350" height="359"/>
+                                <rect key="frame" x="12" y="40" width="350" height="359"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colors Limits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQb-Vy-GoT" userLabel="Header Label">
                                         <rect key="frame" x="2" y="3" width="142" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red [0 - 255]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJj-Sf-Fi5" userLabel="Red Label">
                                         <rect key="frame" x="12" y="32" width="142" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-CW-uMo" userLabel="Horizontal Slider Red Min">
@@ -67,8 +67,8 @@
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green [0 - 255]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUk-dj-m1Q" userLabel="Green Label">
                                         <rect key="frame" x="12" y="137" width="142" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-VK-NuH" userLabel="Horizontal Slider Green Min">
@@ -101,15 +101,15 @@
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue [0 - 255]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-He-sgl" userLabel="Blue Label">
                                         <rect key="frame" x="8" y="242" width="142" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.30105377909999997" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.45490196078431372" blue="0.53333333333333333" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-7W-9vi" userLabel="Fade Strobe Controls View">
-                                <rect key="frame" x="20" y="395" width="350" height="200"/>
+                                <rect key="frame" x="12" y="407" width="350" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Step" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-H3-ThW" userLabel="ColorStepLabel">
                                         <rect key="frame" x="4" y="1" width="91" height="21"/>
@@ -118,59 +118,59 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0010000000474974513" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-2n-b3M" userLabel="ColorStep">
-                                        <rect key="frame" x="6" y="21" width="272" height="31"/>
+                                        <rect key="frame" x="6" y="21" width="260" height="31"/>
                                         <color key="thumbTintColor" red="0.92622180450000002" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
-                                            <action selector="colorStepSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="p4e-7u-u3H"/>
+                                            <action selector="colorStepSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="iXx-UU-7RH"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wa-Ki-QrD" userLabel="ColorStepLabel">
-                                        <rect key="frame" x="284" y="25" width="61" height="21"/>
+                                        <rect key="frame" x="270" y="25" width="75" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0099999997764825821" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-70-Bbg" userLabel="RedFadeModifier">
-                                        <rect key="frame" x="6" y="72" width="272" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-70-Bbg" userLabel="RedFadeModifier">
+                                        <rect key="frame" x="6" y="72" width="260" height="31"/>
                                         <color key="thumbTintColor" red="0.92622180450000002" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
-                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jXJ-gB-vVP"/>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="YTj-zQ-QRE"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-Cl-wUH" userLabel="RedFadeModifierLabel">
-                                        <rect key="frame" x="284" y="77" width="61" height="21"/>
+                                        <rect key="frame" x="270" y="77" width="75" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0099999997764825821" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-G5-G4j" userLabel="GreenFadeModifier">
-                                        <rect key="frame" x="6" y="115" width="272" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-G5-G4j" userLabel="GreenFadeModifier">
+                                        <rect key="frame" x="6" y="115" width="260" height="31"/>
                                         <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
-                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EhX-rB-NUO"/>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="rNt-51-cri"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHL-AE-HoX" userLabel="GreenFadeModifierLabel">
-                                        <rect key="frame" x="284" y="119" width="61" height="21"/>
+                                        <rect key="frame" x="270" y="119" width="75" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.0099999997764825821" minValue="0.0099999997764825821" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="qnx-hW-3Bi" userLabel="BlueFadeModifier">
-                                        <rect key="frame" x="6" y="151" width="272" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qnx-hW-3Bi" userLabel="BlueFadeModifier">
+                                        <rect key="frame" x="6" y="158" width="260" height="31"/>
                                         <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
-                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cAE-Dq-ddF"/>
+                                            <action selector="fadeModifierSliderValueChanged:" destination="dFL-yE-vwh" eventType="valueChanged" id="LLB-xQ-V6k"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-gn-EFt" userLabel="BlueFadeModifierLabel">
-                                        <rect key="frame" x="284" y="155" width="61" height="21"/>
+                                        <rect key="frame" x="270" y="162" width="75" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.45490196078431372" blue="0.53333333333333333" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.56862745100000001" blue="0.63137254899999995" alpha="1" colorSpace="deviceRGB"/>
@@ -180,6 +180,14 @@
                         <outlet property="blueRangeLabel" destination="PW5-He-sgl" id="fHU-Ak-VZu"/>
                         <outlet property="blueRangeMaxSlider" destination="Orv-6E-nZH" id="2da-Wa-550"/>
                         <outlet property="blueRangeMinSlider" destination="XPQ-UI-jqM" id="5H2-Q9-6SD"/>
+                        <outlet property="colorStepLabel" destination="0Wa-Ki-QrD" id="2Lz-6Y-yUh"/>
+                        <outlet property="colorStepSlider" destination="6a5-2n-b3M" id="TuQ-Io-aVZ"/>
+                        <outlet property="fadeBlueModifierLabel" destination="IfN-gn-EFt" id="YEG-rp-78c"/>
+                        <outlet property="fadeBlueModifierSlider" destination="qnx-hW-3Bi" id="SW3-XE-mAf"/>
+                        <outlet property="fadeGreenModifierLabel" destination="mHL-AE-HoX" id="igj-Wr-qnv"/>
+                        <outlet property="fadeGreenModifierSlider" destination="vK4-G5-G4j" id="VcR-8O-v5N"/>
+                        <outlet property="fadeRedModifierLabel" destination="tYg-Cl-wUH" id="9eM-Rs-dkA"/>
+                        <outlet property="fadeRedModifierSlider" destination="Bjj-70-Bbg" id="6NG-W7-lMX"/>
                         <outlet property="greenRangeLabel" destination="xUk-dj-m1Q" id="kEf-nj-cNz"/>
                         <outlet property="greenRangeMaxSlider" destination="yVq-bj-vif" id="BxN-dd-1WM"/>
                         <outlet property="greenRangeMinSlider" destination="CWV-VK-NuH" id="P66-7P-9cf"/>
@@ -223,49 +231,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="not connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98r-Ov-Rqs">
-                                <rect key="frame" x="180" y="25" width="160" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-th-H7O" userLabel="Ip Label">
-                                <rect key="frame" x="20" y="30" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10.0.0.1:3000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-nU-JIr" userLabel="Ip Address Text Field">
-                                <rect key="frame" x="50" y="25" width="120" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
-                                <connections>
-                                    <action selector="urlTextFieldFinishedEditting:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="GGG-Zy-pxu"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRL-wW-OQx" userLabel="Red Color Label">
-                                <rect key="frame" x="20" y="61" width="100" height="25"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-qw-yXL" userLabel="Green Color Label">
-                                <rect key="frame" x="135" y="61" width="100" height="25"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-kT-yXA" userLabel="Blue Color Label">
-                                <rect key="frame" x="250" y="61" width="100" height="25"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-au-i0T" userLabel="ColorView">
-                                <rect key="frame" x="10" y="95" width="350" height="146"/>
+                                <rect key="frame" x="12" y="150" width="350" height="146"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-bf-Kp2" userLabel="Horizontal Slider Red">
                                         <rect key="frame" x="8" y="29" width="334" height="31"/>
@@ -293,14 +260,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5g-aM-qV4" userLabel="Ip Label">
                                         <rect key="frame" x="8" y="5" width="87" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.30105377906976744" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.4549019608" blue="0.53333333329999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uot-uD-KgC" userLabel="FadeControlsView">
-                                <rect key="frame" x="10" y="249" width="350" height="134"/>
+                                <rect key="frame" x="12" y="305" width="350" height="134"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-t7-rJf" userLabel="All OFF">
                                         <rect key="frame" x="180" y="12" width="150" height="50"/>
@@ -347,71 +314,60 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.29802567829457366" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.45490196078431372" blue="0.53333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQ8-Hn-azu" userLabel="Fade Strobe Controls View">
-                                <rect key="frame" x="10" y="391" width="350" height="200"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kG-St-iTr" userLabel="CurrentColorView">
+                                <rect key="frame" x="12" y="90" width="350" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Step" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPr-Co-Tr4" userLabel="ColorStepLabel">
-                                        <rect key="frame" x="4" y="1" width="91" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-qw-yXL" userLabel="Green Color Label">
+                                        <rect key="frame" x="125" y="12" width="100" height="25"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gbU-IT-4lo" userLabel="ColorStep">
-                                        <rect key="frame" x="6" y="21" width="272" height="31"/>
-                                        <color key="thumbTintColor" red="0.92622180451127822" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                        <connections>
-                                            <action selector="colorStepSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lWl-A5-0bH"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mo-g5-J2f" userLabel="ColorStepLabel">
-                                        <rect key="frame" x="284" y="25" width="61" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-kT-yXA" userLabel="Blue Color Label">
+                                        <rect key="frame" x="233" y="12" width="100" height="25"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="R8r-DB-5JD" userLabel="RedFadeModifier">
-                                        <rect key="frame" x="6" y="72" width="272" height="31"/>
-                                        <color key="thumbTintColor" red="0.92622180451127822" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                        <connections>
-                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N5K-vO-DHv"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFx-zp-dL4" userLabel="RedFadeModifierLabel">
-                                        <rect key="frame" x="284" y="77" width="61" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-y4-sui" userLabel="GreenFadeModifier">
-                                        <rect key="frame" x="6" y="115" width="272" height="31"/>
-                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                        <connections>
-                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lOa-Xw-eig"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-Fw-mEG" userLabel="GreenFadeModifierLabel">
-                                        <rect key="frame" x="284" y="119" width="61" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.01" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-Wc-SsY" userLabel="BlueFadeModifier">
-                                        <rect key="frame" x="6" y="151" width="272" height="31"/>
-                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                        <connections>
-                                            <action selector="fadeModifierSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fFd-Sy-zNG"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrS-Ib-Zxr" userLabel="BlueFadeModifierLabel">
-                                        <rect key="frame" x="284" y="155" width="61" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRL-wW-OQx" userLabel="Red Color Label">
+                                        <rect key="frame" x="17" y="12" width="100" height="25"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.45490196078431372" blue="0.53333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l9L-lM-b19" userLabel="ConnectionView">
+                                <rect key="frame" x="12" y="40" width="350" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-th-H7O" userLabel="Ip Label">
+                                        <rect key="frame" x="34" y="9" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="not connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98r-Ov-Rqs">
+                                        <rect key="frame" x="221" y="5" width="121" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10.0.0.1:3000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-nU-JIr" userLabel="Ip Address Text Field">
+                                        <rect key="frame" x="84" y="5" width="120" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                                        <connections>
+                                            <action selector="urlTextFieldFinishedEditting:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="GGG-Zy-pxu"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.45490196078431372" blue="0.53333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.56862745100000001" blue="0.63137254899999995" alpha="1" colorSpace="deviceRGB"/>
@@ -420,15 +376,7 @@
                     <connections>
                         <outlet property="blueColorLabel" destination="a4m-kT-yXA" id="8O2-zn-cWq"/>
                         <outlet property="blueSlider" destination="viA-xr-Pys" id="Iqn-o1-bpL"/>
-                        <outlet property="colorStepLabel" destination="7Mo-g5-J2f" id="KIQ-wT-Y6K"/>
-                        <outlet property="colorStepSlider" destination="gbU-IT-4lo" id="k1O-cV-eSl"/>
                         <outlet property="connectionLabel" destination="98r-Ov-Rqs" id="xJb-AQ-PSn"/>
-                        <outlet property="fadeBlueModifierLabel" destination="GrS-Ib-Zxr" id="UUc-RG-K5L"/>
-                        <outlet property="fadeBlueModifierSlider" destination="OV2-Wc-SsY" id="gSz-jN-0l0"/>
-                        <outlet property="fadeGreenModifierLabel" destination="fhX-Fw-mEG" id="vX6-2g-fQu"/>
-                        <outlet property="fadeGreenModifierSlider" destination="QhC-y4-sui" id="T17-Wl-rSb"/>
-                        <outlet property="fadeRedModifierLabel" destination="wFx-zp-dL4" id="fH2-l8-HRv"/>
-                        <outlet property="fadeRedModifierSlider" destination="R8r-DB-5JD" id="kGi-G7-raN"/>
                         <outlet property="greenColorLabel" destination="BHM-qw-yXL" id="0Ap-Vx-Ue5"/>
                         <outlet property="greenSlider" destination="pWC-eI-4h8" id="gaG-af-VD5"/>
                         <outlet property="redColorLabel" destination="fRL-wW-OQx" id="trX-mq-gzH"/>
