@@ -204,7 +204,7 @@ app.get ( '/strobe', function ( req, res ) {
 	res.send( "strobe" );
 });
 
-app.post ( '/colorLimit/'function ( req, res ) {
+app.post ( '/colorLimit/', function ( req, res ) {
 
 	if ( req.body.redMin )
 	{
