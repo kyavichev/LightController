@@ -267,6 +267,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BumperHeads.LightController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -281,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BumperHeads.LightController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

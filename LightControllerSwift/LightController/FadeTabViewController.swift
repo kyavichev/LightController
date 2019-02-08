@@ -61,7 +61,7 @@ class FadeTabViewController: UIViewController
         self.redRangeLabel.text = text
         
         let params = ["redMin":"\(self.redRangeMinSlider.value)", "redMax":"\(self.redRangeMaxSlider.value)"] as Dictionary<String, String>
-        NetworkManager.sharedInstance.sendPostRequest( "colorLimit/", params: params )
+        NetworkManager.sharedInstance.sendPostRequest( path: "colorLimit/", params: params )
     }
     
     
@@ -75,7 +75,7 @@ class FadeTabViewController: UIViewController
         self.greenRangeLabel.text = text
         
         let params = ["greenMin":"\(self.greenRangeMinSlider.value)", "greenMax":"\(self.greenRangeMaxSlider.value)"] as Dictionary<String, String>
-        NetworkManager.sharedInstance.sendPostRequest( "colorLimit/", params: params )
+        NetworkManager.sharedInstance.sendPostRequest( path: "colorLimit/", params: params )
     }
     
     
@@ -89,7 +89,7 @@ class FadeTabViewController: UIViewController
         self.blueRangeLabel.text = text
         
         let params = ["blueMin":"\(self.blueRangeMinSlider.value)", "blueMax":"\(self.blueRangeMaxSlider.value)"] as Dictionary<String, String>
-        NetworkManager.sharedInstance.sendPostRequest( "colorLimit/", params: params )
+        NetworkManager.sharedInstance.sendPostRequest( path: "colorLimit/", params: params )
     }
     
     
@@ -98,7 +98,7 @@ class FadeTabViewController: UIViewController
         NSLog( "Color Step Slider Value Change!" );
         
         let params = ["value":"\(sender.value)", "test":"abcd"] as Dictionary<String, String>
-        NetworkManager.sharedInstance.sendPostRequest( "colorStep/", params: params )
+        NetworkManager.sharedInstance.sendPostRequest( path: "colorStep/", params: params )
         
         if ( self.colorStepLabel != nil)
         {
@@ -112,7 +112,7 @@ class FadeTabViewController: UIViewController
         NSLog( "Fade Modifier Slider Value Change!" );
         
         let params = ["fadeRedModifier":"\(self.fadeRedModifierSlider.value)", "fadeGreenModifier":"\(self.fadeGreenModifierSlider.value)", "fadeBlueModifier": "\(self.fadeBlueModifierSlider.value)" ] as Dictionary<String, String>
-        NetworkManager.sharedInstance.sendPostRequest( "setFadeModifiers/", params: params )
+        NetworkManager.sharedInstance.sendPostRequest( path: "setFadeModifiers/", params: params )
         
         self.fadeRedModifierLabel.text = "\(round(10000*self.fadeRedModifierSlider.value)/10000)"
         self.fadeGreenModifierLabel.text = "\(round(10000*self.fadeGreenModifierSlider.value)/10000)"
