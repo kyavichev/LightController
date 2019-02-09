@@ -14,6 +14,7 @@ class NetworkManager
     static let sharedInstance = NetworkManager()
     
     var ipString = "http://10.0.1.10:3000/"
+    var hostIp = "10.0.1.43"
     
 
     func sendGetRequest ( path:String )
@@ -38,7 +39,7 @@ class NetworkManager
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
-        urlComponents.host = "10.0.1.10"
+        urlComponents.host = self.hostIp
         urlComponents.port = 3000
         urlComponents.path = "/" + path
         
@@ -70,7 +71,7 @@ class NetworkManager
 
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
-        urlComponents.host = "10.0.1.10"
+        urlComponents.host = self.hostIp
         urlComponents.port = 3000
         urlComponents.path = "/" + path
         
@@ -104,7 +105,7 @@ class NetworkManager
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
-        urlComponents.host = "10.0.1.10"
+        urlComponents.host = self.hostIp
         urlComponents.port = 3000
         urlComponents.path = "/" + path
         

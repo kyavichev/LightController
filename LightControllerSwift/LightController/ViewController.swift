@@ -113,7 +113,10 @@ class ViewController: UIViewController, UITextFieldDelegate
         
         let completionHandler:(Data?, URLResponse?, Error?) -> Void = { (data, response, error:Error?) in
             
-            if let httpResponse = response as? HTTPURLResponse {
+
+            
+            if let httpResponse = response as? HTTPURLResponse
+            {
                 print("error \(httpResponse.statusCode)")
             }
             
@@ -127,7 +130,16 @@ class ViewController: UIViewController, UITextFieldDelegate
             }
             else
             {
+                let httpResponse = response as? HTTPURLResponse
+                
+                print ("error \(httpResponse!.statusCode)")
                 print ( "Got colors:" )
+                
+                if (httpResponse!.statusCode != 200)
+                {
+                    print ( "Issues issues issues" )
+                    return
+                }
                 
                 //let json = try? JSONSerialization.jsonObject(with: data!, options: [])
                 
@@ -136,28 +148,37 @@ class ViewController: UIViewController, UITextFieldDelegate
                     return
                 }
                 
+                let responseData = String(data: data, encoding: String.Encoding.utf8)
+                print( responseData )
+                
                 guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else
                 {
                     print ("Cound generate json" )
                     return
                 }
 
-                guard let jsonDataMap = json as? [String: Any] else
+                guard let jsonMap = json as? [String: Any] else
                 {
-                    print ( "Could not read data" )
+                    print ( "Could not json data" )
+                    return
+                }
+                
+                guard let jsonDataMap = jsonMap[ "data" ] as? [String: Any] else
+                {
+                    print ( "JSON root is not \'data\'" )
                     return
                 }
 
-                let red = jsonDataMap[ "red" ] as! Int
-                let green = jsonDataMap[ "green" ] as! Int
-                let blue = jsonDataMap[ "blue" ] as! Int
-                let colorStep = jsonDataMap[ "colorStep" ] as! Float
+                let red = (jsonDataMap[ "red" ] as! NSNumber).intValue //as! Int
+                let green = (jsonDataMap[ "green" ] as! NSNumber).intValue
+                let blue = (jsonDataMap[ "blue" ] as! NSNumber).intValue
+                let colorStep = (jsonDataMap[ "colorStep" ] as! NSNumber).floatValue
 
-                let fadeRedModifierValue = jsonDataMap[ "fadeRedModifier" ] as! Float
-                let fadeGreenModifierValue = jsonDataMap[ "fadeGreenModifier" ] as! Float
-                let fadeBlueModifierValue = jsonDataMap[ "fadeBlueModifier" ] as! Float
+                let fadeRedModifierValue = (jsonDataMap[ "fadeRedModifier" ] as! NSNumber).floatValue
+                let fadeGreenModifierValue = (jsonDataMap[ "fadeGreenModifier" ] as! NSNumber).floatValue
+                let fadeBlueModifierValue = (jsonDataMap[ "fadeBlueModifier" ] as! NSNumber).floatValue
 
-                let deviceColor = UIColor.init( red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: 1 )
+                let deviceColor = UIColor.init( red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1 )
 
                 
                 DispatchQueue.main.async {
@@ -169,11 +190,11 @@ class ViewController: UIViewController, UITextFieldDelegate
 
                     if ( !self.isRedSliderDragged )
                     {
-                        self.redSlider.value = Float ( (jsonDataMap[ "red" ] as! Float) / 255.0 )
+                        self.redSlider.value = Float ( (jsonDataMap[ "red" ] as! NSNumber).floatValue / 255.0 )
                     }
 
-                    self.greenSlider.value = Float ( (jsonDataMap[ "green" ] as! Float) / 255.0 )
-                    self.blueSlider.value = Float ( (jsonDataMap[ "blue" ] as! Float) / 255.0 )
+                    self.greenSlider.value = Float ( (jsonDataMap[ "green" ] as! NSNumber).floatValue / 255.0 )
+                    self.blueSlider.value = Float ( (jsonDataMap[ "blue" ] as! NSNumber).floatValue / 255.0 )
 
                     if ( self.fadeViewController.view != nil )
                     {
